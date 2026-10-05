@@ -1,0 +1,263 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+    <head>
+
+        <meta charset="utf-8"/>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <meta name="description" content="Verification Driven Program Development"/>
+
+        <meta name="author" content="Ștefan Ciobâcă"/>
+
+        <title>
+            Verification Driven Program Development (2025-2026)
+        </title>
+
+        <link href="bootstrap.min.css" rel="stylesheet"/>
+
+        <link href="bootstrap-theme.min.css" rel="stylesheet"/>
+
+        <link rel="stylesheet" type="text/css" href="my.css"/>
+
+    </head>
+
+    <body role="document">
+
+        <div class="container" role="main">
+
+            <div class="page-header" id="teaching">
+
+	            <h2>Verification Driven Program Development (Dezvoltarea de Programe Bazată pe Verificare) 2026-2027</h2>
+
+	            <ul>
+	                <li>Notare</li>
+                    <ul>
+
+	                  <li>Evaluare</li>
+                      <ul>
+                          <li>prezența la curs: maxim 10p (1p pentru fiecare curs, cu excepția primului curs);</li>
+                          <li>prezența la laborator: maxim 10p (1p pentru fiecare laborator);</li>
+                          <li>rezolvarea în timpul laboratorului a fișelor de exerciții: maxim 20p;</li>
+                          <li>test scris (S8): maxim 20p;</li>
+                          <li>lucrul la proiect în timpul laboratorului: maxim 20p;</li>
+                          <li>examen: maxim 20p.</li>
+                      </ul>
+                      
+                      <li>Reexaminare: maxim 100p (punctajele pentru activitățile de mai sus nu se iau în calcul).</li>
+                      <li>Nota finală se calculează prin împărțirea punctajului final la 10 și rotunjire la cel mai apropiat întreg mai mic sau egal decât 10.</li>
+                    </ul>
+
+	                <li>Contact</li>
+	                <ul>
+	                    <li>Curs: Ștefan Ciobâcă - stefan.ciobaca@uaic.ro</li>
+	                </ul>
+
+                    <li>Ediții Precedente</li>
+                    <ul>
+                        <li><a href="./dafny-2024-2025/index.html"> VDPD 2024-2025</a></li>
+                        <li><a href="./dafny-2025-2026/index.html"> VDPD 2025-2026</a></li>
+                    </ul>
+
+	            </ul>
+	            
+            </div>
+
+            <h2>Referințe Bibliografice</h2>
+
+            <ul>
+	          <li>
+	            <a href="https://dafny.org/teaching-material/">Slides</a>
+	          </li>
+	          <li>
+	            <a href="https://dafny.org/latest/DafnyRef/DafnyRef">Dafny Reference Manual</a>
+	          </li>
+	          <li>
+	            <a href="https://dafny.org/latest/OnlineTutorial/guide">Dafny Tutorial</a>
+	          </li>
+            </ul>
+
+            <!-- <h2>Motivație</h2> -->
+
+            <!-- <p>Cum vor arăta limbajele de programare mainstream în 10 -->
+            <!--     sau 20 de ani? Nu putem prezice cu siguranță, dar putem -->
+            <!--     estima, în funcție de istoricul acestora:</p> -->
+
+            <!-- <ul> -->
+            <!--     <li><a href="https://en.wikipedia.org/wiki/ENIAC">ENIAC</a> (1945): programare prin manipularea cablurilor și comutatoarelor</li> -->
+            <!--     <li>cod mașină (nu este nevoie să conectăm cabluri)</li> -->
+            <!--     <li>limbaj de asamblare (nu este nevoie să memorăm coduri numerice)</li> -->
+            <!--     <li>1957: FORTRAN (notație matematică)</li> -->
+            <!--     <li>1960: <em>LISP</em> (inspirat de lambda-calcul)</li> -->
+            <!--     <li>1960: <em>ALGOL</em> (programare structurată)</li> -->
+            <!--     <li>1963: BASIC (pentru începători)</li> -->
+            <!--     <li>1972: C (programare structurată eficientă)</li> -->
+            <!--     <li>1985: C++ (organizăm proiecte mari folosind clase)</li> -->
+            <!--     <li>1990: <em>Haskell</em> (immutability, inferență de tipuri, tipuri algebrice) </li> -->
+            <!--     <li>1996: Java (gestiunea automată a memoriei, safety)</li> -->
+            <!--     <li>2009: Go (concurență)</li> -->
+            <!--     <li>2015: Rust (gestiune avansată automată a memoriei, un plus de safety)</li> -->
+            <!--     <li>2020: C++20 (concepte, module, C++11: inferență de tipuri, expresii lambda)</li> -->
+            <!-- </ul> -->
+
+            <!-- <p>Limbajele devin de nivel mai înalt, permit scrierea de -->
+            <!-- programe la nivel mai abstract, iar -->
+            <!-- compilatorul <em>impune</em> reguli care încurajează -->
+            <!-- scrierea de programe robuste și corecte (e.g., programe -->
+            <!-- fără SEGFAULT, programe care nu permit accesarea de -->
+            <!-- memorie nealocată, nu permit <em>data races</em> -->
+            <!-- ș.a.m.d.).</p> -->
+
+            <!-- <p>Cele mai multe idei care ajung în limbajele mainstream
+                 provin din limbajele de programare care nu au avut
+                 neapărat succes comercial, ci au fost proiectate și
+                 folosite mai mult în mediul universitar (e.g., ALGOL,
+                 Haskell). În acest fel, concepte precum programarea
+                 structurată, gestiunea automată a memoriei (garbage
+                 collection), inferență de tipuri, funcții anonime, tipuri
+                 algebrice de date, bounds checking ș.a.m.d. au trecut din
+                 limbajele academice spre limbaje mainstream.</p>
+
+                 <p>Una dintre metodele cele mai importante pentru
+                 asigurarea unui grad de încredere ridicat în
+                 corectitudinea unui program este <em>verificarea</em>.
+                 Verificarea unui program este un pic ca testarea, în
+                 sensul în care creștem gradul de încredere că programul
+                 respectă anumite proprietăți dorite. Dar spre deosebire de
+                 teste, verificarea este <em>exhaustivă</em>. Testele nu pot arăta decât că
+                 programul funcționează corect pe un număr finit de date de
+                 intrare, în timp ce în verificarea asigură că
+                 proprietățile sunt adevărate pentru absolut toate datele
+                 de intrare.</p>
+            -->
+            <!-- <p>Una dintre metodele <em>lightweight</em> de verificare -->
+            <!-- este reprezentat de sistemul de tipuri al -->
+            <!-- limbajului. Sistemele de tipuri din limbajele mainstream -->
+            <!-- au împrumutat deja trăsături din limbajele academice: -->
+            <!-- Java/C#/Go/Rust sunt implicit <em>memory safe</em>,  </p> -->
+
+            <!-- <p> -->
+            <!--     În cadrul cursului, vom studia un limbaj de programare -->
+            <!--     (Dafny), care încurajează scrierea de programe -->
+            <!--     verificate. Limbajul Dafny nu este larg folosit în -->
+            <!--     industrie (doar în unele cazuri de nișă, în companii -->
+            <!--     precum Amazon sau Microsoft), dar este de așteptat ca -->
+            <!--     ideile din spatele acestui limbaj să își facă -->
+            <!--     ușor-ușor loc și în limbajele mainstream. -->
+            <!-- </p> -->
+
+            <!-- <div style="text-align:center"><img alt="La intersecția -->
+            <!-- dintre programare, algoritmi și logică" src="diagram3.png" -->
+            <!-- width="350em"/></div> -->
+
+            <!-- <p> -->
+            <!--     Un program verificat este un pic ca un program scris -->
+            <!--     de două ori, în două feluri diferite: -->
+            <!-- </p> -->
+                    
+            <!--     <ul> -->
+            <!--         <li>I. implementarea, similar cu alte limbaje imperative;</li> -->
+            <!--         <li>II. specificația, similar cu un limbaj pur -->
+            <!--         funcțional.</li> -->
+            <!--     </ul> -->
+
+            <!--     <p> -->
+            <!--         Implementarea conține de obicei mai multe detalii, -->
+            <!--     precum structurile de date folosite, modul în care se -->
+            <!--     calculează fiecare pas al algoritmului. Specificația -->
+            <!--     este de obicei mai scurtă, fără detalii, și folosește -->
+            <!--     un limbaj pur funcțional, apropiat de matematică. -->
+            <!--     </p> -->
+
+            <!--     <p> -->
+            <!--         De exemplu, în cazul unui algoritm de sortare, -->
+            <!--         implementarea poate fi algoritmul quicksort, în -->
+            <!--         timp ce specificația poate fi că elementele -->
+            <!--         vectorului de la ieșire sunt aceleași cu cele de -->
+            <!--         la intrare, dar în ordine -->
+            <!--         crescătoare. Specificația nu detaliază modul în -->
+            <!--         care se ajunge în această ordine și este -->
+            <!--         respectată de orice algoritm de sortare (insert -->
+            <!--         sort, merge sort). Mai jos este un exemplu de -->
+            <!--         algoritm de sortare verificat în -->
+            <!--         Dafny. Specificația (care apare după cuvântul cheie <em>ensures</em>) -->
+            <!--         cere doar ca vectorul să devină sortat la final. -->
+            <!--     </p> -->
+
+            <!--     <div style="text-align:center"><img alt="La intersecția dintre programare, algoritmi și logică" src="sort.png" width="750em"/></div> -->
+
+            <!--     <p> -->
+            <!--     Sistemul Dafny folosește un demonstrator automat -->
+            <!--     pentru a asigura că implementarea respectă -->
+            <!--     specificația, dar demonstratorul are nevoie uneori și -->
+            <!--     de ajutor din partea programatorului în cazurile mai -->
+            <!--     complex (sub forma unor adnotări). -->
+            <!--     </p> -->
+
+            <!-- <p> -->
+            <!--     În cadrul cursului, vom descoperi concepte precum -->
+            <!--     <em>precondiție</em>, <em>postcondiție</em>, -->
+            <!--     <em>invariant de buclă</em>, <em>invariant de -->
+            <!--         clasă</em>, <em>variant</em>, <em>cadre</em>, câmpuri <em>fantomă</em> și vom învăța cum ne -->
+            <!--     putem folosi de ele pentru a dezvolta programe mai -->
+            <!--     fiabile. -->
+            <!-- </p> -->
+
+            <!-- <p> -->
+            <!--     Dacă vă plac programarea, algoritmii și logica, este -->
+            <!--     foarte probabil să vă placă și acest curs. Dacă vă -->
+            <!--     plac doar două dintre cele trei elemente, este posibil -->
+            <!--     să descoperiți utilitatea și celui de-al treilea. -->
+            <!-- </p> -->
+
+            <!--     <p>Alte limbaje similare: -->
+            <!--     <ul> -->
+            <!--         <li> -->
+            <!--             <a href="https://coq.inria.fr/">Coq</a> -->
+            <!--         </li> -->
+            <!--         <li> -->
+            <!--             <a href="https://www.fstar-lang.org/">F*</a> -->
+            <!--         </li> -->
+            <!--         <li> -->
+            <!--             <a href="https://lean-lang.org/">Lean</a> -->
+            <!--         </li> -->
+            <!--         <li> -->
+            <!--             <a href="https://whiley.org/">Whiley</a> -->
+            <!--         </li> -->
+            <!--         <li> -->
+            <!--             <a href="https://www.why3.org/">Why3</a> -->
+            <!--         </li> -->
+            <!--     </ul> -->
+            <!-- </p> -->
+
+            <h2>Plan de lucru</h2>
+
+            <ul>
+              <h4>Introducere și Motivație</h4>
+              <h4>Programare Funcțională în Dafny</h4>
+              <h4>Propoziții Logice</h4>
+              <h4>Programare Imperativă în Dafny</h4>
+              <h4>Programare Orientată Obiect în Dafny</h4>
+   	          <h4>Demonstrații</h4>
+   	          <h4>Verificarea Programelor de Mari Dimensiuni</h4>
+            </ul>
+
+            <h2>Materiale</h2>
+
+            <ul>
+                
+              <li>Săptămâna 1</li>
+              
+                <p>Curs: <a href="c01.dfy">DFY</a>.</p>
+                <p>Fișă de lucru laborator: <a href="lab01.pdf">PDF</a>.</p>
+
+            </ul>
+            
+        </div></body> </html>
+
+<!-- Local Variables: -->
+        <!-- time-stamp-pattern: "-12/<p>Last modified:[ \t]+%3a %3b %02H:%02M:%02S %Z %:y by %u</p>" -->
+        <!-- time-stamp-time-zone: "UTC" -->
+        <!-- End: -->
