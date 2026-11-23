@@ -128,3 +128,36 @@ demonstrare.
 
 https://wpte2026.github.io/pre-proceedings.pdf
 https://github.com/smercas/docker-for-conf
+
+
+# Proiect 13.
+
+Optimizați solverul SAT de mai jos
+
+https://github.com/andricicezar/sat-solver-dafny
+
+prin implementarea, specificarea și verificarea structurii de date
+*two watched literals*
+(https://www.cis.upenn.edu/~cis1890/files/Lecture3.pdf,
+https://school.a4cp.org/summer2011/slides/Gent/SATCP3.pdf).
+
+
+# Proiect 14.
+
+Implementați, specificați și verificați în Dafny o clonă a unui
+utilitar sistem, precum:
+
+14.A. csvcut
+(https://csvkit.readthedocs.io/en/latest/scripts/csvcut.html)
+
+14.B. diff (https://man7.org/linux/man-pages/man1/diff.1.html)
+
+14.C. unique
+(https://www.geeksforgeeks.org/linux-unix/uniq-command-in-linux-with-examples/)
+
+14.D. sort (https://man7.org/linux/man-pages/man1/sort.1.html)
+
+14.E. base64 (https://linux.die.net/man/1/base64)
+
+14.F. grep (https://man7.org/linux/man-pages/man1/grep.1.html)
+
