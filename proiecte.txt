@@ -1,0 +1,130 @@
+La proiecte este permisă folosirea liberă a AI.
+
+Regulă: păstrați toată interacțiunea cu AI și o prezentați la sfârșit.
+
+Regulă: codul final trebuie să poată fi explicat/modificat de către
+student în mod individual la examen.
+
+Azi: proiect pe github + acces (ciobaca + roxana413).
+
+
+# Proiect 1. *Improve performance* of Dafny code for encoding and
+  decoding (ex: array in loc de seq, int32 in loc de int, samd)
+
+https://github.com/ciobaca/qoi-dafny
+https://profs.info.uaic.ro/stefan.ciobaca/dafny-qoi-ifm2024.pdf
+https://qoiformat.org/qoi-specification.pdf
+
+
+
+# Proiect 2. Add support for both RGB and RGBA
+
+The input is currently only RGB, and the output is only RGBA.
+
+Add the possibility for the input to be RGBA and the output to be RGB.
+
+https://github.com/ciobaca/qoi-dafny
+https://profs.info.uaic.ro/stefan.ciobaca/dafny-qoi-ifm2024.pdf
+https://qoiformat.org/qoi-specification.https
+
+
+
+# Proiect 3. OpenPGP Key Server
+
+Implement, specify, and verify in Dafny a PGP key server (a HAGRID
+clone) in Dafny. This project was a 2020 VerifyThis Long Term
+Challenge.
+
+Resources: [challenge website](https://verifythis.github.io/ltc/01hagrid/)
+
+https://formal.kastel.kit.edu/biblio/researcher/ulbrich/pdf/hagrid.pdf
+
+
+# Proiect 4. Verified memcached clone
+
+Implement, specify, and verify in Dafny a memcached clone, described
+below. This project is the current VerifyThis Long Term Challenge.
+
+Resources: [challenge website](https://verifythis.github.io/ltc/03memcached/)
+
+
+# Proiect 5. Implement, specify, and verify in Dafny a smart contract:
+
+https://verifythis.github.io/ltc/02casino/
+
+
+# Proiect 6. A library for Dynamic Programming in Dafny
+
+https://github.com/Haidau-Alina-Adriana/Licenta/blob/main/Documentatie/Licenta.pdf
+https://github.com/roxana413/Licenta-Dafny/blob/main/Documentation/Lucrare_de_licenta.pdf
+
+Implement, specify, and verify a Dafny module for dynamic programming
+with several instances for Knapsack, Longest Common Subsequence (LCS),
+Longest Increasing Subsequence (LIS), etc.
+
+https://github.com/roxana413/Dynafny
+
+
+
+# Proiect 7. A library for Backtracking in Dafny
+
+An abstract module for the backtracking technique with several
+instances: problema reginelor, sudoku etc.
+
+https://github.com/radup99/Sudoku-Dafny/blob/master/final.dfy
+http://vdpd-lecture.github.io/col3.dfy
+
+
+# Proiect 8. Implement, specify, and verify a library for mini-max in Dafny
+
+E.g. for games like connect4, tic-tac-toe, chess.
+
+
+
+# Proiect 9.
+
+Port the library for greedy algorithms in Dafny to 2026.
+
+https://github.com/cristirusu-99/ASP-Greedy-Dafny
+https://github.com/ElisaChicos/Licenta/blob/main/Documentatie/main.pdf
+https://github.com/alexxandra21/Licenta2023/blob/main/Documentatie/main.pdf
+https://docta.ucm.es/rest/api/core/bitstreams/6e267d5e-d292-4f02-b8c1-9c7f85ff6eed/content
+
+Metodologie:
+- actualizeze sintaxa (daca e cazul)
+- pentru lemele/metodele care nu se verifica cu noua versiune, sa
+  adauge intr-o prima faza "assume false"
+- usor, usor: de scos assume false-urile
+
+
+# Proiect 10 
+
+Implement, specify, and verify Cooper's algorithm for Linear Integer
+Arithmetic (with quantifiers)
+
+https://www2.imm.dtu.dk/courses/02917/Presburger1.pdf
+
+Pasi sugerati:
+- de implementat, pe rand, toate transformarile
+- de demonstrat, pe rand, ca fiecare transformare pastreaza echivalenta
+
+
+# Proiect 11.
+
+Prove in Dafny the soundness and completeness of natural deduction for
+First-Order Logic.
+
+Bibliografie:
+* https://profs.info.uaic.ro/stefan.ciobaca/bsc-theses/bsc-thesis-daniel-birleanu.pdf
+* https://logicincs.github.io/2025-2026/note_curs_lp1.pdf
+* https://cs.uwaterloo.ca/~cbruni/CS245Resources/lectures/2018_Spring/09_Propositional_Logic_Natural_Deduction_Soundness_and_Completeness_post.pdf
+* https://people.compute.dtu.dk/ahfrom/OpenFormulas.pdf
+
+
+# Proiect 12 (de scris in TypeScript).
+
+Un plugin pentru VS Code care să implementeze modul interactiv de
+demonstrare.
+
+https://wpte2026.github.io/pre-proceedings.pdf
+https://github.com/smercas/docker-for-conf
